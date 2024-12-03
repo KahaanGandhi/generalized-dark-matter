@@ -124,9 +124,9 @@ def solve_era(ode_system_unperturbed, ode_system_perturbed, a_func, t_min, t_max
 
 def plot_fractional_difference(a_values_rd, fractional_difference_rd, a_values_md, fractional_difference_md, params_rd, params_md):
     lw = 1.5
-    frac_diff_color = '#7DF9FF'  # Blue
-    start_kick_color = '#FF69B4'       # Pink
-    end_kick_color = '#FFFF00'         # Yellow
+    frac_diff_color = '#7DF9FF'   # Blue
+    start_kick_color = '#FF69B4'  # Pink
+    end_kick_color = '#FFFF00'    # Yellow
     equation_rd = r'$\ddot{\delta}(\vec{k}) + \frac{1}{t} \dot{\delta}(\vec{k}) - \frac{1}{t^2} \left(1 - \frac{3 c_s^2 k^2}{32 G \pi \bar{\rho} a^2} \right) \delta(\vec{k}) = 0$'
     equation_md = r'$\ddot{\delta}(\vec{k}) + \frac{4}{3t} \dot{\delta}(\vec{k}) - \frac{2}{3t^2} \left(1 - \frac{2 a c_s^2 k^2}{3 H_0^2} \right) \delta(\vec{k}) = 0$'
 

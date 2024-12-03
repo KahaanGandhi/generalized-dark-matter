@@ -149,7 +149,7 @@ def plot_fractional_difference(a_values_rd, fractional_difference_rd, a_values_m
     axs[0].text(0.5, 1.08, equation_rd, transform=axs[0].transAxes, fontsize=14, color='white', ha='center')
 
     # MD Plot
-    axs[1].semilogx(a_values_md, fractional_difference_md, color=fractional_diff_color, linewidth=lw)
+    axs[1].semilogx(a_values_md, fractional_difference_md, color=frac_diff_color, linewidth=lw)
     axs[1].axvline(x=params_md['ai'], color=start_kick_color, linestyle='--', label='Start of Kick', linewidth=lw)
     axs[1].axvline(x=params_md['af'], color=end_kick_color, linestyle='--', label='End of Kick', linewidth=lw)
     axs[1].set_xlabel('Scale Factor $a$', color='white', fontsize=14)

@@ -124,7 +124,7 @@ def solve_era(ode_system_unperturbed, ode_system_perturbed, a_func, t_min, t_max
 
 def plot_fractional_difference(a_values_rd, fractional_difference_rd, a_values_md, fractional_difference_md, params_rd, params_md):
     lw = 1.5
-    fractional_diff_color = '#7DF9FF'  # Blue
+    frac_diff_color = '#7DF9FF'  # Blue
     start_kick_color = '#FF69B4'       # Pink
     end_kick_color = '#FFFF00'         # Yellow
     equation_rd = r'$\ddot{\delta}(\vec{k}) + \frac{1}{t} \dot{\delta}(\vec{k}) - \frac{1}{t^2} \left(1 - \frac{3 c_s^2 k^2}{32 G \pi \bar{\rho} a^2} \right) \delta(\vec{k}) = 0$'
@@ -134,7 +134,7 @@ def plot_fractional_difference(a_values_rd, fractional_difference_rd, a_values_m
     plt.subplots_adjust(wspace=0.25, top=0.82)
 
     # RD Plot
-    axs[0].semilogx(a_values_rd, fractional_difference_rd, color=fractional_diff_color, label='Fractional Difference', linewidth=lw)
+    axs[0].semilogx(a_values_rd, fractional_difference_rd, color=frac_diff_color, label='Fractional Difference', linewidth=lw)
     axs[0].axvline(x=params_rd['ai'], color=start_kick_color, linestyle='--', label='Start of Kick', linewidth=lw)
     axs[0].axvline(x=params_rd['af'], color=end_kick_color, linestyle='--', label='End of Kick', linewidth=lw)
     axs[0].set_xlabel('Scale Factor $a$', color='white', fontsize=14)

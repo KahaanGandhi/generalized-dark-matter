@@ -1,9 +1,7 @@
 import numpy as np
 import matplotlib.pyplot as plt
+from collections import OrderedDict
 from scipy.integrate import solve_ivp
-
-# MD: matter-dominated era
-# RD: radiation-dominated era
 
 # Constants
 G = 1.0
@@ -168,7 +166,6 @@ def plot_fractional_difference(a_values_rd, fractional_difference_rd, a_values_m
     lines = [line for lines, labels in lines_labels for line in lines]
     labels = [label for lines, labels in lines_labels for label in labels]
 
-    from collections import OrderedDict
     lines_labels_dict = OrderedDict()
     for line, label in zip(lines, labels):
         if label not in lines_labels_dict:
